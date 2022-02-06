@@ -1,21 +1,21 @@
 # action.yml
 name: 'Notebook to Markdown Converted'
 description: 'Converts a jupyter notebook to a markdownfile'
-inputs:
-  nb-filename:  
-    description: 'The notebook filename'
-    required: false
-    default: 'notebook.ipynb'
-  md-filename:  
-    description: 'The output markdown filename'
-    required: false
-    default: 'README.md'
+# inputs:
+#   nb-filename:  
+#     description: 'The notebook filename'
+#     required: false
+#     default: 'notebook.ipynb'
+#   md-filename:  
+#     description: 'The output markdown filename'
+#     required: false
+#     default: 'README.md'
 outputs:
   result: 
     description: 'The final state'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.nb-filename }}
-    - ${{ inputs.md-filename }}
+  # args:
+  #   - ${{ inputs.nb-filename }}
+  #   - ${{ inputs.md-filename }}

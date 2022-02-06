@@ -3,10 +3,10 @@ from nbconvert import MarkdownExporter
 
 def main():
     work_dir = os.environ.get('GITHUB_WORKSPACE', '.')
-    nb_filename = os.path.join(work_dir, 
-        os.environ.get("INPUT_NB_FILENAME", 'notebook.ipynb')
-    )
-    md_filename = os.path.join(work_dir, os.environ.get("INPUT_MD_FILENAME", 'README.md'))
+    # nb_filename = os.path.join(work_dir, 
+    #     os.environ.get("INPUT_NB_FILENAME", 'notebook.ipynb')
+    # )
+    # md_filename = os.path.join(work_dir, os.environ.get("INPUT_MD_FILENAME", 'README.md'))
 
     # print(f"::debug::Converting {nb_filename}")
 
@@ -18,7 +18,7 @@ def main():
     # with open(md_filename, 'w') as f:
     #     f.write(body)
 
-    print(f"::set-output name=result::Converted {nb_filename} to {md_filename}")
+    print(f"::set-output name=result::Converted {work_dir} to {work_dir}")
 
 if __name__ == '__main__':
     main()
