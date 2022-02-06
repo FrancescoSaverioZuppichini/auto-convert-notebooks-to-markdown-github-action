@@ -1,16 +1,21 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Notebook to Markdown Converted'
+description: 'Converts a jupyter notebook to a markdownfile'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+  nb-filename:  # id of input
+    description: 'The notebook filename'
+    required: false
+    default: 'notebook.ipynb'
+  md-filename:  # id of input
+    description: 'The output markdown filename'
+    required: false
+    default: 'README.md'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  state: # id of output
+    description: 'The final state'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.my-input }}
+    - ${{ inputs.nb-filename }}
+    - ${{ inputs.md-filename }}

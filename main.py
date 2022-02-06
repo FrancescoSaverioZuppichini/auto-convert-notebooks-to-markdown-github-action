@@ -14,8 +14,8 @@ def main():
 
     with open(md_filename, 'w') as f:
         f.write(body)
-        
-    print(f"::set-output name=Success::Converting {nb_filename} to {md_filename}")
+
+    print(f"::set-output name=state::Converted {nb_filename} to {md_filename}")
 
 if __name__ == '__main__':
     main()
