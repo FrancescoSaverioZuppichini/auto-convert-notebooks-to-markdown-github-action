@@ -2,16 +2,16 @@
 name: 'Notebook to Markdown Converted'
 description: 'Converts a jupyter notebook to a markdownfile'
 inputs:
-  nb-filename:  # id of input
+  nb-filename:  
     description: 'The notebook filename'
     required: false
     default: 'notebook.ipynb'
-  md-filename:  # id of input
+  md-filename:  
     description: 'The output markdown filename'
     required: false
     default: 'README.md'
 outputs:
-  state: # id of output
+  result: 
     description: 'The final state'
 runs:
   using: 'docker'
