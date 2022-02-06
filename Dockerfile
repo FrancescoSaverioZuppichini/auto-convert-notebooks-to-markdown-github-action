@@ -6,7 +6,7 @@ RUN pip install nbconvert
 # COPY entrypoint.sh /entrypoint.sh
 COPY main.py /main.py
 COPY entrypoint.sh /entrypoint.sh
-
+RUN echo $(ls -l)
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
 # CMD [ "python", "main.py"]
