@@ -4,4 +4,4 @@ echo $(ls .)
 # echo "Converting $1"
 # time=$(date)
 # echo "::set-output name=time::$time"
-python main.py
+python /main.py
